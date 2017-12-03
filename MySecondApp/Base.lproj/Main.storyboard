@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySecondApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fc-Qs-1yc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0KK-nh-Ns9" appends="YES" id="EqA-YP-7q4"/>
+                                    <outletCollection property="gestureRecognizers" destination="9rc-6H-djq" appends="YES" id="w8x-NE-COG"/>
+                                    <outletCollection property="gestureRecognizers" destination="VMr-Ot-UFN" appends="YES" id="YGc-Ok-SGq"/>
+                                    <outletCollection property="gestureRecognizers" destination="f0Q-HK-T42" appends="YES" id="QHm-Gr-djD"/>
+                                </connections>
+                            </wkWebView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGq-rh-dA2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7d-9u-qo6">
+                                <rect key="frame" x="162" y="308" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F7d-9u-qo6" secondAttribute="height" multiplier="1:1" id="CoL-zM-619"/>
+                                    <constraint firstAttribute="width" constant="50" id="Ic6-DB-3EC"/>
+                                    <constraint firstAttribute="height" constant="50" id="VR7-Ms-Hjb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopLoadingWebpage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nLY-sB-wNB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F7d-9u-qo6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="288" id="3IM-a2-uYs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F7d-9u-qo6" secondAttribute="trailing" constant="163" id="7D7-IH-law"/>
+                            <constraint firstItem="8fc-Qs-1yc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="911-0P-gZI"/>
+                            <constraint firstItem="cGq-rh-dA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jha-EI-I99"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fc-Qs-1yc" secondAttribute="trailing" id="NBF-Y8-D8y"/>
+                            <constraint firstItem="cGq-rh-dA2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Olf-6d-o1V"/>
+                            <constraint firstItem="cGq-rh-dA2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pp2-m3-XaO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8fc-Qs-1yc" secondAttribute="bottom" id="ZFO-Q5-kY2"/>
+                            <constraint firstItem="F7d-9u-qo6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="lGv-8X-1Nb"/>
+                            <constraint firstItem="cGq-rh-dA2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oeJ-87-Hr8"/>
+                            <constraint firstItem="8fc-Qs-1yc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u4X-av-28n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F7d-9u-qo6" secondAttribute="bottom" constant="309" id="xCi-on-xPr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingBackground" destination="cGq-rh-dA2" id="zxX-8Z-lrG"/>
+                        <outlet property="stopLoadingButton" destination="F7d-9u-qo6" id="bsE-B6-l1B"/>
+                        <outlet property="webView" destination="8fc-Qs-1yc" id="zvf-YO-Jly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="0KK-nh-Ns9">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="navToPrevPage:" destination="BYZ-38-t0r" id="moa-vV-cEp"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="9rc-6H-djq">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="navToForwardPage:" destination="BYZ-38-t0r" id="dZa-lD-IKH"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="VMr-Ot-UFN">
+                    <connections>
+                        <action selector="doubleTapZoom:" destination="BYZ-38-t0r" id="R7T-U1-ZyP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="f0Q-HK-T42">
+                    <rectEdge key="edges" top="YES"/>
+                    <connections>
+                        <action selector="swipeFromTopEdgeReload:" destination="BYZ-38-t0r" id="NH9-fl-R1C"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
